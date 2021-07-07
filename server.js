@@ -58,6 +58,7 @@ const getUrl = (website) => {
             });
             const bodyString = await readGzip(response.body);
             const isAvailable = isProductAvailable(bodyString, website.wordSearch);
+            console.log(isAvailable);
             resolve(isAvailable);
         } catch (e) {
             reject(e);
